@@ -4,76 +4,107 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Alena Schleser Portfolio</title>
+<!-- Google Fonts für einen ähnlichen Schriftstil -->
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet" />
 <style>
   body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
   }
+
+  /* Header mit Titel */
   header {
     background-color: #222;
     color: white;
     padding: 20px;
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
   }
-  h1 {
-    margin: 0;
-  }
+
+  /* Navigation */
   nav {
     display: flex;
     justify-content: center;
     background-color: #444;
   }
+
   nav a {
     color: white;
-    padding: 14px 20px;
+    padding: 12px 20px;
     text-decoration: none;
+    font-weight: bold;
     transition: background 0.3s;
   }
+
   nav a:hover {
-    background-color: #555;
+    background-color: #666;
   }
-  section {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  h2 {
-    color: #222;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-  }
-  .project {
-    margin-bottom: 20px;
-  }
-  .kontakt {
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 8px;
-  }
+
+  /* Abschnitt */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 28px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Slide Layouts (einfach, mit Rahmen) */
+.slide {
+  background-color: #fff;
+  border: 2px solid #222;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+.slide h3 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Projekte */
+.project {
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Alena Schleser Portfolio</h1>
+  <div>Alena Schleser Portfolio</div>
 </header>
 
 <nav>
   <a href="#about">Über mich</a>
-  <a href="#projects">Projekte</a>
-  <a href="#drawings">Zeichnungen</a>
+  <a href="#projekte">Projekte</a>
+  <a href="#zeichnungen">Zeichnungen</a>
   <a href="#social-media">Social Media</a>
-  <a href="#contact">Kontakt</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
 
-<section id="about">
+<section id="about" class="slide">
   <h2>Über mich</h2>
   <p>Mein Interesse liegt in der Grafik, dem Design und den digitalen Medien. Kreative Ideen umzusetzen und digitale Projekte zu gestalten, motiviert mich besonders.</p>
 </section>
 
-<section id="projects">
+<section id="projekte" class="slide">
   <h2>Projekte</h2>
 
   <div class="project">
@@ -112,21 +143,21 @@
   </div>
 </section>
 
-<section id="drawings">
+<section id="zeichnungen" class="slide">
   <h2>Zeichnungen</h2>
   <p>Analog- und Digitalzeichnungen. Digitale Zeichnungen erstellt mit Procreate.</p>
 </section>
 
-<section id="social-media">
+<section id="social-media" class="slide">
   <h2>Social Media</h2>
   <p>Betreuung eines Darts-Accounts, inklusive Video- und Bildcontent, sowie Logoentwicklung.</p>
 </section>
 
-<section id="contact">
+<section id="kontakt" class="slide">
   <h2>Kontakt</h2>
-  <div class="kontakt">
+  <div class="contact-info">
     <p>Alena Schleser</p>
-    <p>Email: <a href="mailto:alena.schleser@gmail.com">Alena.schleser@gmail.com</a></p>
+    <p>Email: <a href="mailto:Alena.schleser@gmail.com">Alena.schleser@gmail.com</a></p>
   </div>
 </section>
 
