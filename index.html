@@ -1,53 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <title>Mein Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
 
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial;
-      background: #f3e8ff; /* Flieder hell */
-      color: #2b2b2b;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    header {
+    body {
+      background: #f6efff;
+      color: #2b2b2b;
+    }
+
+    /* HERO */
+    .hero {
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #e9d5ff, #f3e8ff);
+      text-align: center;
     }
 
-    img {
-      width: 150px;
-      height: 150px;
+    .hero img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
       border: 4px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
 
-    button {
-      background: #c084fc;
+    .name-btn {
+      background: #a855f7;
       color: white;
+      padding: 12px 30px;
       border: none;
-      padding: 12px 25px;
-      font-size: 18px;
-      border-radius: 25px;
+      border-radius: 30px;
+      font-size: 20px;
       cursor: pointer;
       transition: 0.3s;
+      font-weight: bold;
     }
 
-    button:hover {
-      background: #a855f7;
+    .name-btn:hover {
+      background: #7e22ce;
+      transform: translateY(-2px);
     }
 
+    .subtitle {
+      margin-top: 15px;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 60px 20px;
+      max-width: 900px;
+      margin: 60px auto;
       background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #6b21a8;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* PROJECT CARD */
+    .project {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #f3e8ff;
     }
 
   </style>
@@ -55,22 +94,50 @@
 
 <body>
 
-<header>
-  <!-- Bild einfügen -->
-  <img src="dein-bild.jpg" alt="Mein Bild">
+  <!-- HERO -->
+  <div class="hero">
 
-  <!-- Button Name -->
-  <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
-    Alena
-  </button>
+    <img src="dein-bild.jpg" alt="Mein Bild">
 
-  <p>Willkommen auf meinem Portfolio</p>
-</header>
+    <button class="name-btn"
+      onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+      Alena
+    </button>
 
-<section id="portfolio">
-  <h2>Mein Portfolio</h2>
-  <p>Hier zeige ich meine Projekte im Bereich E-Commerce.</p>
-</section>
+    <div class="subtitle">
+      E-Commerce Portfolio
+    </div>
+
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>Über mich</h2>
+    <p>
+      Ich interessiere mich für Online Shops, digitale Produkte und Marketing.
+      Mein Ziel ist es, die Abläufe im E-Commerce zu verstehen und praktisch anzuwenden.
+    </p>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Mein Projekt</h2>
+
+    <div class="project">
+      <h3>Fake Online Shop Konzept</h3>
+      <p>
+        Ich entwickle ein Beispiel für einen Online Shop inkl. Produktstruktur,
+        Zielgruppe und Marketingidee.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Kontakt</h2>
+    <p>Email: deine@email.com</p>
+  </section>
 
 </body>
 </html>
