@@ -17,3 +17,8 @@ url: "https://alenaschleser.github.io"
 baseurl: ""  # the subpath of your site, e.g. /blog
 include: ["_pages"]
 exclude: ["Gemfile", "Gemfile.lock"]
+
+# Plugins
+plugins:
+  - jekyll-github-metadata
+  - jekyll-theme-primer
