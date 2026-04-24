@@ -1,0 +1,19 @@
+# Jekyll Config
+
+# Title of your site
+title: My Awesome Site
+
+# Name of the author
+author:
+  name: Alena Schleser
+
+# Description of your site
+description: A description of your site.
+
+# URL of your site
+url: "https://alenaschleser.github.io"
+
+# Build settings
+baseurl: ""  # the subpath of your site, e.g. /blog
+include: ["_pages"]
+exclude: ["Gemfile", "Gemfile.lock"]
