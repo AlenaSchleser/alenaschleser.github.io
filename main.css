@@ -392,7 +392,7 @@ body {
 .hero__description {
     font-size: var(--fs-lg);
     color: var(--color-text);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
     max-width: 55rem;
 }
@@ -402,63 +402,90 @@ body {
     font-weight: var(--fw-bold);
 }
 
+/* ===== Hero Badges (NEU) ===== */
+.hero__badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    background: rgba(153, 153, 255, 0.12);
+    color: var(--color-primary);
+    border: 1px solid rgba(153, 153, 255, 0.25);
+    transition: var(--transition);
+}
+
+.hero__badge:hover {
+    background: rgba(153, 153, 255, 0.22);
+    border-color: var(--color-primary);
+}
+
 .hero__buttons {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
+/* ===== Hero Image — rundes Bild mit Farbring (NEU) ===== */
 .hero__image {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: slideInRight 0.8s ease forwards;
 }
 
-.hero__img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: var(--box-shadow-lg);
+.hero__img-ring {
+    position: relative;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    box-shadow: 0 0 40px rgba(153, 153, 255, 0.3);
     transition: var(--transition);
 }
 
-.hero__img:hover {
+.hero__img-ring:hover {
+    box-shadow: 0 0 60px rgba(153, 153, 255, 0.5);
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(153, 153, 255, 0.3);
+}
+
+.hero__img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border: 4px solid var(--color-bg-primary);
 }
 
 .hero__image-decoration {
     position: absolute;
-    top: -2rem;
-    right: -2rem;
-    width: 120%;
-    height: 120%;
-    background: linear-gradient(135deg, rgba(204, 153, 255, 0.1), rgba(153, 153, 255, 0.05));
-    border-radius: 20px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(153, 153, 255, 0.12) 0%, transparent 70%);
     z-index: -1;
     animation: float 3s ease-in-out infinite;
 }
 
 @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes float {
@@ -470,6 +497,21 @@ body {
     .hero__wrapper {
         grid-template-columns: 1fr;
         padding: 2rem 0;
+        text-align: center;
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .hero__img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero__image-decoration {
+        width: 260px;
+        height: 260px;
     }
 
     .hero__title {
@@ -480,9 +522,8 @@ body {
         font-size: clamp(1.8rem, 5vw, 2.4rem);
     }
 
-    .hero__img {
-        max-width: 300px;
-        margin: 0 auto;
+    .hero__badges {
+        justify-content: center;
     }
 
     .hero__buttons {
@@ -530,69 +571,70 @@ body {
     margin-bottom: 3rem;
 }
 
-.skills__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+/* ===== Skill Bars (NEU) ===== */
+.skills__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
 }
 
-.skill__card {
-    background: rgba(36, 36, 36, 0.8);
-    border: 1px solid var(--color-border);
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    transition: var(--transition);
+.skill__bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-.skill__card:hover {
-    background: rgba(51, 51, 255, 0.1);
-    border-color: var(--color-primary);
-    transform: translateY(-5px);
+.skill__bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.skill__icon {
-    font-size: 3.2rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
-
-.skill__card h4 {
+.skill__bar-name {
+    font-size: var(--fs-md);
     color: var(--color-white);
-    margin-bottom: 0.5rem;
-    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
-.skill__card p {
-    color: var(--color-text);
+.skill__bar-name i {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+}
+
+.skill__bar-percent {
     font-size: var(--fs-sm);
+    color: var(--color-primary);
+    font-weight: var(--fw-bold);
+}
+
+.skill__bar-track {
+    width: 100%;
+    height: 8px;
+    background: rgba(55, 55, 55, 0.8);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill__bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: width 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media screen and (max-width: 968px) {
     .about__wrapper {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-
-    .skills__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .skills__grid {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -626,7 +668,7 @@ body {
 .project__image {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 220px;
     overflow: hidden;
     background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-secondary));
 }
@@ -639,7 +681,7 @@ body {
 }
 
 .project__card:hover .project__image img {
-    transform: scale(1.1);
+    transform: scale(1.08);
     filter: brightness(0.7);
 }
 
