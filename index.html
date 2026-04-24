@@ -1,338 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Alena Schleser - Portfolio">
-    <meta name="description"
-        content="Alena Schleser's Portfolio">
-    <meta name="keywords"
-        content="Alena Schleser">
+    <meta name="description" content="Portfolio von Alena Schleser - Auf der Suche nach einer Kooperationsfirma für E-Commerce-Kauffrau Lehre">
+    <meta name="keywords" content="Alena Schleser, E-Commerce, Portfolio, Designer">
     <meta name="author" content="Alena Schleser">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="German">
-    <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-    <title>Alena Schleser Portfolio</title>
-    <!--=================== Main CSS ====================-->
+    <title>Alena Schleser - Portfolio</title>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="main.css">
-    <!--=================== Google Fonts ====================-->
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-
-    <!--=================== Remixicons ====================-->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!--=================== SwiperJS CSS ====================-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
 </head>
 
 <body>
-
-    <!--=================== Header ====================-->
+    <!-- Header -->
     <header id="header" class="header">
         <div class="container">
             <nav class="nav">
-                <a href="/" class="nav__brand">
-                    <i class="ri-code-s-slash-line"></i>Alena<Span>Schleser</Span>
+                <a href="#" class="nav__brand">
+                    <i class="ri-code-s-slash-line"></i>
+                    <span>Alena<strong>Schleser</strong></span>
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#start" class="nav__link">Start</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">Über mich</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#drawings" class="nav__link">Projekte</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#project" class="nav__link">Zeichnungen</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">Kontakt</a>
-                        </li>
+                        <li class="nav__item"><a href="#start" class="nav__link">Start</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Über mich</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projekte</a></li>
+                        <li class="nav__item"><a href="#drawings" class="nav__link">Zeichnungen</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
                     </ul>
                 </div>
-                <div class="nav__toggle">
-                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-3-line"></i>
                 </div>
             </nav>
         </div>
     </header>
-    <!--=================== main ====================-->
+
+    <!-- Main -->
     <main class="main">
-        <!--=================== Start ====================-->
-        <section id="start" class="start">
+        <!-- Hero Section -->
+        <section id="start" class="hero">
             <div class="container">
-                <div class="d-grid start__wrapper">
-                    <div class="start__content">
-                        <h1 class="hero__title">Hi, ich bin Alena</h1>
-                        <h2 id="typewriter"
-                            style="font-size: 25px; font-weight: bold; color: #CC99FF; border-right: 2px solid #CC99FF; white-space: nowrap; overflow: hidden; display: inline-block;">
-                        </h2>
-                        <p style="margin-top:15px;" class="start__description">Ich bin auf der suche nach einer Kooperationsfirma für eine Lehre als E-Commercekauffrau.
-                      </p>
-                        <a href="mailto:alena.schleser@gmail.com" class="btn--primary"
-                            style="padding:1.5rem 4rem;margin-bottom:10px;display:inline-block;">Kontaktiere mich!</a>
-                            </div>
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Hi, ich bin <span class="highlight">Alena</span></h1>
+                        <div class="typewriter__container">
+                            <h2 id="typewriter" class="typewriter"></h2>
+                            <span class="typewriter__cursor">|</span>
+                        </div>
+                        <p class="hero__description">
+                            Ich bin engagiert, kreativ und auf der Suche nach einer <strong>Kooperationsfirma für eine Lehre als E-Commerce-Kauffrau</strong>. Meine Leidenschaft liegt in der Gestaltung digitaler Erlebnisse.
+                        </p>
+                        <div class="hero__buttons">
+                            <a href="#contact" class="btn btn--primary">
+                                <i class="ri-mail-line"></i> Kontaktiere mich
+                            </a>
+                            <a href="#projects" class="btn btn--secondary">
+                                <i class="ri-arrow-down-line"></i> Meine Projekte
+                            </a>
                         </div>
                     </div>
-                    <img src="IMG_5448.JPG" alt="Alena" class="hero__img">
+                    <div class="hero__image">
+                        <img src="IMG_5448.JPG" alt="Alena Schleser" class="hero__img">
+                        <div class="hero__image-decoration"></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!--=================== About ====================-->
+
+        <!-- About Section -->
         <section id="about" class="section about">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Über mich</h2>
                     <span class="section__subtitle">Wer bin ich?</span>
                 </div>
-                <div class="d-grid about__wrapper">
+                <div class="about__wrapper">
                     <div class="about__content">
-                        <h3 class="about__title">Ich heiße Alena Schleser lalalalalalala.
+                        <h3>Alena Schleser</h3>
+                        <p>
+                            Ich bin eine motivierte und kreative Person mit einem großen Interesse für E-Commerce und digitale Lösungen. Während meiner schulischen Laufbahn habe ich bereits praktische Erfahrungen mit verschiedenen Design- und Office-Tools gesammelt.
                         </p>
-                        <a href="#project" class="btn btn--primary">Meine Projekte</a>
-                    </div>
-                    <div class="skills">
-                        <h3 class="skills__title">Apps mit denen ich bereits gearbeitet habe:</h3>
-                        <div class="skills__wrapper">
-                            <div class="skills__content">
-                                <ul class="skills__list">
-
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Canva</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Ms Office</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Procreate</li>
-                                </ul>
-                            </div>
-        <!--=================== Projects ====================-->
-        <section id="project" class="section project">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Projekte</h2>
-                    <span class="section__subtitle">Meine Projekte</span>
-                </div>
-                <div class="d-grid project__wrapper">
-                    <!--============== project 1 =============-->
-                    <div class="project__content">
-                        <img src="assets/img/project1.png" alt="Agency Website" class="project__img">
-                        <a href="https://cryptoverse2x.netlify.app/" class="project__link">
-                            <h3 class="project__title">1AS</h3>
-                        </a>
-                        <p class="project__description">lalalallalala.</p>
-                        <a href="https://github.com/HamzaZaidiX/Cryptoverse" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                    <!--============== project 2 =============-->
-                    <div class="project__content">
-                        <img src="assets/img/project2.png" alt="Cryptoverse " class="project__img">
-                        <a href="https://play-hangman-shjz.netlify.app/" class="project__link">
-                            <h3 class="project__title">2AS</h3>
-                        </a>
-                        <p class="project__description">lalallal</p>
-                        <a href="https://github.com/HamzaZaidiX/Hangman-Game" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                    <!--============== project 3 =============-->
-                    <div class="project__content">
-                        <img src="assets/img/project3.png" alt="Nike Landing Page" class="project__img">
-                        <a href="https://nike-shjz.netlify.app/" class="project__link">
-                            <h3 class="project__title">3AS</h3>
-                        </a>
-                        <p class="project__description">lalallalalla</p>
-                        <a href="https://github.com/HamzaZaidiX/Nike-Landing-Page" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                    <!-- ============== project 4 ============= -->
-                    <div class="project__content">
-                        <img src="assets/img/project4.png" alt="linktree clone" class="project__img">
-                        <a href="https://github.com/HamzaZaidiX/Linktree-Clone" class="project__link">
-                            <h3 class="project__title">4AS</h3>
-                        </a>
-                        <p class="project__description">lalalalal</p>
-                        <a href="https://github.com/HamzaZaidiX/Linktree-Clone" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                    <!-- ============== project 5 ============= -->
-                    <div class="project__content">
-                        <img src="assets/img/project5.png" alt="Gemini Ai clone" class="project__img">
-                        <a href="https://gemini-clone-shjz.netlify.app/" class="project__link">
-                            <h3 class="project__title">5AS</h3>
-                        </a>
-                        <p class="project__description">lalalalala</p>
-                        <a href="https://github.com/HamzaZaidiX/Gemini-Clone" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                    <!-- ============== project 6 ============= -->
-                    <div class="project__content">
-                        <img src="assets/img/project6.png" alt="News 4U" class="project__img">
-                        <a href="https://github.com/HamzaZaidiX/News-4-U" class="project__link">
-                            <h3 class="project__title">6AS</h3>
-                        </a>
-                        <p class="project__description">lalalala</p>
-                        <a href="https://github.com/HamzaZaidiX/News-4-U" class="project__link">Zeige das Projekt
-                            <i class="ri-arrow-right-line"></i></a>
-                    </div>
-                </div>
-               
-        </section>
-
-        </div>
-        <div class="swiper-pagination"></div>
-        </div>
-        </div>
-        </section>
-
-        <!--=================== Contact ====================-->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <div class="d-grid contact__wrapper">
-                    <div class="contact__content">
-                        <h2 class="contact__title">Interesse geweckt?</h2>
-                        <p class="contact__description">
-                            lalalala
+                        <p>
+                            Mein Ziel ist es, praktische Erfahrungen in einem professionellen Umfeld zu sammeln und meine Fähigkeiten als E-Commerce-Kauffrau weiterzuentwickeln.
                         </p>
+                        <a href="#projects" class="btn btn--primary">
+                            <i class="ri-arrow-right-line"></i> Meine Projekte ansehen
+                        </a>
                     </div>
-                <!-- Contact Form -->
-                <div
-                    style="display: flex; min-height: 100vh; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 1.4px; margin-top: 10px;">
-                    <div style="flex: 0 1 700px; margin: auto; padding: 10px; width: 100%;">
-                        <div
-                            style="position: relative; background: #3e3e3e; border-radius: 15px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); width: 100%;">
-                            <div
-                                style="display: flex; align-items: center; padding: 10px 20px; background: #4d4d4f; border-top-left-radius: 15px; border-top-right-radius: 15px;">
-                                <div style="margin-right: auto;">
-                                    <div
-                                        style="display: inline-block; width: 8px; height: 8px; margin-right: 3px; border-radius: 8px; background: #ed1c6f;">
-                                    </div>
-                                    <div
-                                        style="display: inline-block; width: 8px; height: 8px; margin-right: 3px; border-radius: 8px; background: #e8e925;">
-                                    </div>
-                                    <div
-                                        style="display: inline-block; width: 8px; height: 8px; border-radius: 8px; background: #74c54f;">
-                                    </div>
+                    <div class="about__skills">
+                        <h3 class="skills__title">Meine Kompetenzen</h3>
+                        <div class="skills__grid">
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-palette-line"></i>
                                 </div>
+                                <h4>Design</h4>
+                                <p>Canva, Procreate</p>
                             </div>
-                            <div style="display: flex; flex-wrap: wrap; flex-direction: column; padding: 20px;">
-                                <div style="flex: 1; padding: 20px; color: #32a852;">
-                                    <div style="font-size: 26px; margin-bottom: 10px;">
-                                        <span>Kontaktiere mich</span>
-                                    </div>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-file-list-line"></i>
                                 </div>
-                                <div style="">
-                                    <!-- Embed Google Form -->
-                                    <iframe
-                                        src="lalala"
-                                        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-                                    </iframe>
+                                <h4>Office</h4>
+                                <p>Microsoft Office Suite</p>
+                            </div>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-lightbulb-line"></i>
                                 </div>
+                                <h4>Kreativität</h4>
+                                <p>Ideenfindung & Konzepte</p>
+                            </div>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-team-line"></i>
+                                </div>
+                                <h4>Teamfähigkeit</h4>
+                                <p>Zusammenarbeit & Kommunikation</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Schulprojekte</h2>
+                    <span class="section__subtitle">Meine bisherigen Projekte</span>
+                </div>
+                <div class="projects__grid">
+                    <!-- Project 1 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project1.png" alt="1AS Projekt">
+                            <div class="project__overlay">
+                                <a href="https://cryptoverse2x.netlify.app/" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">1AS Projekt</h3>
+                            <p class="project__description">Ein innovatives Schulprojekt aus dem ersten Lehrjahr, das meine Fähigkeiten in Design und Kreativität zeigt.</p>
+                            <div class="project__tags">
+                                <span class="tag">Design</span>
+                                <span class="tag">Kreativ</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/Cryptoverse" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project2.png" alt="2AS Projekt">
+                            <div class="project__overlay">
+                                <a href="https://play-hangman-shjz.netlify.app/" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">2AS Projekt</h3>
+                            <p class="project__description">Ein weiteres Schulprojekt, das zeigt, wie ich meine Fähigkeiten kontinuierlich entwickle und verbessere.</p>
+                            <div class="project__tags">
+                                <span class="tag">Design</span>
+                                <span class="tag">Entwicklung</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/Hangman-Game" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project3.png" alt="3AS Projekt">
+                            <div class="project__overlay">
+                                <a href="https://nike-shjz.netlify.app/" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">3AS Projekt</h3>
+                            <p class="project__description">Ein anspruchsvolles Projekt, das meine fortgeschrittenen Designfähigkeiten demonstriert.</p>
+                            <div class="project__tags">
+                                <span class="tag">Design</span>
+                                <span class="tag">UX/UI</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/Nike-Landing-Page" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project4.png" alt="4AS Projekt">
+                            <div class="project__overlay">
+                                <a href="#" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">4AS Projekt</h3>
+                            <p class="project__description">Ein kreatives Schulprojekt, das meine Fähigkeiten in verschiedenen Bereichen unter Beweis stellt.</p>
+                            <div class="project__tags">
+                                <span class="tag">Kreativ</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/Linktree-Clone" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project5.png" alt="5AS Projekt">
+                            <div class="project__overlay">
+                                <a href="https://gemini-clone-shjz.netlify.app/" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">5AS Projekt</h3>
+                            <p class="project__description">Ein fortgeschrittenes Projekt, das modernste Design- und Entwicklungstechniken zeigt.</p>
+                            <div class="project__tags">
+                                <span class="tag">Modern</span>
+                                <span class="tag">Technologie</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/Gemini-Clone" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/img/project6.png" alt="6AS Projekt">
+                            <div class="project__overlay">
+                                <a href="#" class="btn btn--small" target="_blank">
+                                    <i class="ri-external-link-line"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">6AS Projekt</h3>
+                            <p class="project__description">Mein letztes Schulprojekt zeigt die Höhepunkte meiner Entwicklung und meiner kreativen Fähigkeiten.</p>
+                            <div class="project__tags">
+                                <span class="tag">Finale</span>
+                                <span class="tag">Exzellenz</span>
+                            </div>
+                            <a href="https://github.com/HamzaZaidiX/News-4-U" class="project__link" target="_blank">
+                                Auf GitHub anschauen <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drawings Section -->
+        <section id="drawings" class="section drawings">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Meine Zeichnungen</h2>
+                    <span class="section__subtitle">Kreative Werke</span>
+                </div>
+                <div class="drawings__gallery">
+                    <p class="drawings__placeholder">
+                        <i class="ri-image-add-line"></i><br>
+                        Deine Zeichnungen und Kunstwerke werden hier angezeigt
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Lassen Sie uns zusammenarbeiten</h2>
+                    <span class="section__subtitle">Interesse geweckt?</span>
+                </div>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <h3>Kontakt</h3>
+                        <p>Ich freue mich auf deine Nachricht! Kontaktiere mich gerne für eine Zusammenarbeit oder um mehr über mich zu erfahren.</p>
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <i class="ri-mail-line"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:alena.schleser@gmail.com">alena.schleser@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__form-container">
+                        <form class="contact__form" id="contactForm">
+                            <div class="form__group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="subject">Betreff</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="message">Nachricht</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--large">
+                                <i class="ri-send-plane-line"></i> Nachricht senden
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <!--=================== footer ====================-->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="d-grid footer__wrapper"
-                style="display:flex;justify-content:center; align-items:center; text-align:center;">
-                <div class="footer__content">
-                    <h4 class="footer__title">Folge mir</h4>
-                    <ul class="footer__social-list">
-                        <li class="footer__social-item">
-                            <a href="mailto:alena.schleser@gmail.com" target="_blank" class="footer__social-link">
-                                <i class="fa-regular fa-envelope fa-beat-fade"></i>
-                            </a>
-                        </li>
 
-                        <li class="footer__social-item">
-                            <a href="https://www.instagram.com/alena.schleser" target="_blank"
-                                class="footer__social-link">
-                                <i class="fa-brands fa-instagram fa-beat-fade"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.linkedin.com/in/alena-schleser/" target="_blank" class="footer__social-link">
-                                <i class="fa-brands fa-linkedin-in fa-beat-fade"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://github.com/alenaschleser" target="_blank" class="footer__social-link">
-                                <i class="fa-brands fa-github fa-fade"></i>
-                            </a>
-                        </li>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Alena Schleser</h4>
+                    <p>Zukünftige E-Commerce-Kauffrau</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Folge mir</h4>
+                    <div class="footer__socials">
+                        <a href="mailto:alena.schleser@gmail.com" title="Email" class="footer__link">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                        <a href="https://www.instagram.com/alena.schleser" target="_blank" title="Instagram" class="footer__link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alena-schleser/" target="_blank" title="LinkedIn" class="footer__link">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/alenaschleser" target="_blank" title="GitHub" class="footer__link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#about">Über mich</a></li>
+                        <li><a href="#projects">Projekte</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
-
             </div>
-            <p class="footer__copyright">&copy; 2026 Alena Schleser. All Rights Reserved</p>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Alena Schleser. Alle Rechte vorbehalten.</p>
+            </div>
         </div>
     </footer>
 
-    <!--=================== SwiperJS  ====================-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <!--=================== ScrollReveal ==================-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--=================== Main JS ====================-->
+    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 
 </html>
-
-<script>
-    const typewriterTexts = [
-      "Kreativ",
-      "Engagiert",
-      "Idealistisch",
-      "Organisiert",
-    ];
-
-    let currentTextIndex = 0;
-    let charIndex = 0;
-
-    const typewriterElement = document.getElementById("typewriter");
-
-    function typeEffect() {
-      // Get the current text
-      const currentText = typewriterTexts[currentTextIndex];
-
-      // Update the text content with the next character
-      typewriterElement.textContent = currentText.slice(0, charIndex);
-
-      // Increment the character index
-      charIndex++;
-
-      // If the full text has been typed, pause and then switch to the next text
-      if (charIndex > currentText.length) {
-        setTimeout(() => {
-          charIndex = 0; // Reset character index
-          currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length; // Move to next text
-        }, 2000); // Pause before switching
-      }
-
-      // Continue typing every 100ms
-      setTimeout(typeEffect, 100);
-    }
-
-    // Start the typewriter effect
-    typeEffect();
-</script>
