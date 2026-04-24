@@ -1,0 +1,115 @@
+// ===== Navigation Toggle =====
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle?.addEventListener('click', () => {
+    navMenu?.classList.toggle('active');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu?.classList.remove('active');
+    });
+});
+
+// ===== Header Scroll Effect =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header?.classList.add('header--scroll');
+    } else {
+        header?.classList.remove('header--scroll');
+    }
+});
+
+// ===== Typewriter Effect =====
+const typewriterTexts = ['Kreativ', 'Engagiert', 'Idealistisch', 'Organisiert'];
+const typewriterElement = document.getElementById('typewriter');
+let currentTextIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentText = typewriterTexts[currentTextIndex];
+
+    if (!isDeleting) {
+        if (charIndex < currentText.length) {
+            typewriterElement.textContent += currentText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeEffect, 80);
+        } else {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+        }
+    } else {
+        if (charIndex > 0) {
+            typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(typeEffect, 60);
+        } else {
+            isDeleting = false;
+            currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length;
+            setTimeout(typeEffect, 500);
+        }
+    }
+}
+
+typeEffect();
+
+// ===== Contact Form =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const mailtoLink = `mailto:alena.schleser@gmail.com?subject=${encodeURIComponent(formData.get('subject'))}&body=${encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nNachricht:\n${formData.get('message')}`)}`;
+        
+        window.location.href = mailtoLink;
+        
+        // Reset form
+        this.reset();
+        alert('Danke für deine Nachricht! Du wirst weitergeleitet zu deinem Mail-Client.');
+    });
+}
+
+// ===== Smooth Scroll for Navigation =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            const element = document.querySelector(href);
+            const headerHeight = header?.offsetHeight || 0;
+            const offsetTop = element.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// ===== Intersection Observer für Animationen =====
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = getComputedStyle(entry.target).animation;
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('[class*="__"]').forEach(element => {
+    if (getComputedStyle(element).animation.includes('fadeInUp') || 
+        getComputedStyle(element).animation.includes('slideIn')) {
+        observer.observe(element);
+    }
+});
