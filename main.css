@@ -2,7 +2,7 @@
     /* Colors
     ____________________*/
     --color-primary: #8080ff;
-    --color-primary-dark: #ccccff;
+    --color-primary-dark: #6666ff;
     --color-bg-primary: #1a1a1a;
     --color-bg-secondary: #242424;
     --color-bg-footer: #151515;
@@ -70,7 +70,7 @@
   h4,
   ul,
   p {
-    margin: 0;
+    margin: 10px;
     padding: 0;
   }
   
