@@ -111,51 +111,34 @@
                     </div>
                     <div class="about__skills">
                         <h3 class="skills__title">Meine Kompetenzen</h3>
-                        <div class="skills__bars">
-                            <div class="skill__bar-item">
-                                <div class="skill__bar-header">
-                                    <span class="skill__bar-name"><i class="ri-palette-line"></i> Canva</span>
-                                    <span class="skill__bar-percent">90%</span>
+                        <div class="skills__grid">
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-palette-line"></i>
                                 </div>
-                                <div class="skill__bar-track">
-                                    <div class="skill__bar-fill" data-width="90"></div>
-                                </div>
+                                <h4>Design</h4>
+                                <p>Canva, Procreate</p>
                             </div>
-                            <div class="skill__bar-item">
-                                <div class="skill__bar-header">
-                                    <span class="skill__bar-name"><i class="ri-brush-line"></i> Procreate</span>
-                                    <span class="skill__bar-percent">80%</span>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-file-list-line"></i>
                                 </div>
-                                <div class="skill__bar-track">
-                                    <div class="skill__bar-fill" data-width="80"></div>
-                                </div>
+                                <h4>Office</h4>
+                                <p>Microsoft Office Suite</p>
                             </div>
-                            <div class="skill__bar-item">
-                                <div class="skill__bar-header">
-                                    <span class="skill__bar-name"><i class="ri-file-list-line"></i> Microsoft Office</span>
-                                    <span class="skill__bar-percent">85%</span>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-lightbulb-line"></i>
                                 </div>
-                                <div class="skill__bar-track">
-                                    <div class="skill__bar-fill" data-width="85"></div>
-                                </div>
+                                <h4>Kreativität</h4>
+                                <p>Ideenfindung & Konzepte</p>
                             </div>
-                            <div class="skill__bar-item">
-                                <div class="skill__bar-header">
-                                    <span class="skill__bar-name"><i class="ri-team-line"></i> Teamfähigkeit</span>
-                                    <span class="skill__bar-percent">95%</span>
+                            <div class="skill__card">
+                                <div class="skill__icon">
+                                    <i class="ri-team-line"></i>
                                 </div>
-                                <div class="skill__bar-track">
-                                    <div class="skill__bar-fill" data-width="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill__bar-item">
-                                <div class="skill__bar-header">
-                                    <span class="skill__bar-name"><i class="ri-lightbulb-line"></i> Kreativität</span>
-                                    <span class="skill__bar-percent">92%</span>
-                                </div>
-                                <div class="skill__bar-track">
-                                    <div class="skill__bar-fill" data-width="92"></div>
-                                </div>
+                                <h4>Teamfähigkeit</h4>
+                                <p>Zusammenarbeit & Kommunikation</p>
                             </div>
                         </div>
                     </div>
@@ -443,20 +426,6 @@
             setTimeout(type, isDeleting ? 40 : 70);
         }
         type();
-
-        // Skill Bars Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.skill__bar-fill').forEach(bar => {
-                        bar.style.width = bar.dataset.width + '%';
-                    });
-                }
-            });
-        }, { threshold: 0.3 });
-
-        const skillSection = document.querySelector('.about__skills');
-        if (skillSection) observer.observe(skillSection);
 
         // Nav toggle
         const navToggle = document.getElementById('nav-toggle');
