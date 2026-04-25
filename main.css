@@ -664,7 +664,7 @@ body {
         --fs-xxl: 2rem;
         --fs-xl: 1.8rem;
     }
-    .hero__buttons { flex-direction: column; gap: 1rem; }
+    .start__buttons { flex-direction: column; gap: 1rem; }
     .btn { padding: 1rem 2rem; font-size: var(--fs-md); }
     .section { padding: 5rem 0; }
 }
