@@ -992,24 +992,28 @@ body {
 }
 
 /* ===== Responsiveness ===== */
-@media screen and (max-width: 600px) {
-    :root {
-        --fs-biggest: 2.5rem;
-        --fs-xxl: 2rem;
-        --fs-xl: 1.8rem;
-    }
+.grid {
+    display: grid;
+    gap: 1rem;
+}
 
-    .hero__buttons {
-        flex-direction: column;
-        gap: 1rem;
+/* =====Mobile===== */
+@media (min-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .btn {
-        padding: 1rem 2rem;
-        font-size: var(--fs-md);
+/* =====Tablets / small Laptops===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
+}
 
-    .section {
-        padding: 5rem 0;
+/* =====Desktop===== */
+@media (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
